@@ -1,0 +1,128 @@
+body {
+  background-image: url("../../img/fond.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr 0.3fr 1fr;
+      grid-template-columns: 1fr 1fr 0.3fr 1fr;
+  gap: 0, 15px;
+      grid-template-areas: ". inputText buttonAdd .";
+}
+
+section .text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: inputText;
+}
+
+section .add {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: buttonAdd;
+  cursor: pointer;
+  background-color: greenyellow;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr  0.2fr 0.2fr;
+      grid-template-columns: 1fr  0.2fr 0.2fr;
+      grid-template-areas: "p pencil croix";
+  cursor: pointer;
+  position: relative;
+  font-size: 1em;
+  padding: 12px 8px 12px 40px;
+}
+
+li p {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: p;
+  margin: 0;
+  font-size: 2em;
+  color: darkblue;
+}
+
+li .update {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: pencil;
+  background-color: deepskyblue;
+  text-decoration: none;
+}
+
+li .delete {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: croix;
+  background-color: red;
+  text-decoration: none;
+}
+
+li .update, li .delete {
+  cursor: pointer;
+  width: 50%;
+}
+
+.checked {
+  background: limegreen;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+@media (max-width: 480px) {
+  p, .text, .add {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 481px) {
+  p, .text, .add {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 769px) {
+  p, .text, .add {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1280px) {
+  p, .text, .add {
+    font-size: 2em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
